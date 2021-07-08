@@ -13,7 +13,6 @@ function FahrenheitCentigrados ()
 	tempC = parseInt((tempF - 32) /1.8);
 
 	alert(` ${tempF} grados Fahrenheit equivalen a ${tempC} grados Celsius`);
-
 }
 
 function CentigradosFahrenheit () 
@@ -26,5 +25,4 @@ function CentigradosFahrenheit ()
 	tempF = parseInt((tempC * 1.8) + 32);
 
 	alert(` ${tempC} grados Celsius equivalen a ${tempF} grados Fahrenheit`);
-	
 }

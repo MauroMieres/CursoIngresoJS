@@ -19,3 +19,20 @@ function mostrarAumento()
 	//con esto muestro en la casilla "resultado" el resultado obtenido
 	document.getElementById('txtIdResultado').value = importeNuevo;
 }
+
+/* 	entradas
+		prompt
+		document.getElementById(...) value o id.value
+		x = id.value
+
+	procesos
+		+; -; *; /; %;
+
+	salidas
+		console.log
+		alert
+		document.write
+		id.value = x
+
+		*/
+	
