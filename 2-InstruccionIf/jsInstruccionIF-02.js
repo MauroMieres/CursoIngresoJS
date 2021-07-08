@@ -1,3 +1,5 @@
+/*Al ingresar una edad debemos informar solo si la persona es mayor de edad*/
+
 function mostrar()
 {
 	let edad;
@@ -8,9 +10,5 @@ function mostrar()
 	{
 		alert("Usted es mayor de edad");
 	}
-	else
-	{
-		alert("Usted es menor de edad");
-	}
-
 }
+

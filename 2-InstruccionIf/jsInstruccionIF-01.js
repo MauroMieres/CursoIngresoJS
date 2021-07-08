@@ -2,6 +2,8 @@
 operadores aritmeticos, + - / * %, sus operadores son numericos, number
 operadores relacionales; == (igual) != (distinto) > mayor < menor >= mayor o igual <= menor o igual
 sus operadores son datos, ejemplo, booleanos, strings, etc, el resultado es un booleano
+
+Al ingresar una edad que sea igual a 15, mostrar el mensaje "niña bonita".
 */
 
 function mostrar()
@@ -14,7 +16,4 @@ function mostrar()
 	{
 		alert("♫ Mi niña bonita, mi dulce princesa, me siento en las nubes, cuanto tu me besas ♫")
 	}
-
-	alert("Fin de la funcion");
-
-}//FIN DE LA FUNCIÓN
+}
