@@ -12,12 +12,26 @@ function mostrarAumento()
 	//utilizo un float porq necesito discrimar los enteros con decimales en este caso
 	importe = parseFloat(document.getElementById('txtIdImporte').value);
 
-	descuento = importe * 0.25; //0.25 = 25%
+	//nueva consiga: que el usuario ingrese cuanto quiere hacer de descuento
+	//probe hacerlo con if y quedo asi para q no introduzcan valores fuera del parametro:
 
-	importeNuevo = importe - descuento
+	descuento = prompt("Ingrese cuanto descuento quiere hacer (entre 1% y 100%)");
+
+	if(descuento >= 1 && descuento <= 100)
+	{
+		descuento = (descuento / 100);
+		importeNuevo = importe - (importe * descuento);
+		document.getElementById('txtIdResultado').value = importeNuevo;
+	}
+	else
+	{
+		alert("Por favor ingrese un numero valido")
+	}
+	
+	//vieja consigna: 
+	//descuento = importe * 0.25; //0.25 = 25%
 
 	//con esto muestro en la casilla "resultado" el resultado obtenido
-	document.getElementById('txtIdResultado').value = importeNuevo;
 }
 
 /* 	entradas
