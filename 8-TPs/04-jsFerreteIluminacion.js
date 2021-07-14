@@ -24,6 +24,8 @@ function CalcularPrecio ()
 	let precioTotalLamparas;
 	let marcaLamparas;
 	let precioFinal;
+	let iibb;
+	let precioiibb;
 
 	precioLamparas = 35,
 	cantidadLamparas = document.getElementById('txtIdCantidad').value;
@@ -88,13 +90,7 @@ function CalcularPrecio ()
 									precioFinal = precioTotalLamparas - ( precioTotalLamparas * 0.05);
 									document.getElementById('txtIdprecioDescuento').value = precioFinal
 								}
-								else
-								{
-									if(precioFinal > 120)
-									{
-										alert(precioFinal);
-									}
-								}
+		
 							}
 						}
 					}
@@ -102,7 +98,12 @@ function CalcularPrecio ()
 			}
 		}
 	}
-	alert("precio sin descuento" + precioTotalLamparas);
 
- 	
+	if(precioFinal > 120)
+		{
+		precioiibb = precioFinal * 1.10;
+		iibb = precioiibb - precioFinal;
+		//.toFixed(x) siendo x la cantidad de digitos que quiero mostrar
+		alert("IIBB Usted pago $ "+precioiibb.toFixed(2)+" , siendo "+iibb.toFixed(2)+" el impuesto que se pagó.");
+		}
 }
