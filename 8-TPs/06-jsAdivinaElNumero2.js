@@ -18,7 +18,6 @@ let minimo = 1;
 function comenzar()
 {
 	numeroSecreto =parseInt(Math.round(Math.random()*(maximo - minimo) + minimo));
-	alert("El numeroSecreto es: " + numeroSecreto);
 }
 
 function verificar()

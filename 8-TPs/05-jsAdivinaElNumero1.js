@@ -1,4 +1,4 @@
-/*Al comenzar el juego generamos un número 
+/* mieres mauro Al comenzar el juego generamos un número 
 secreto del 1 al 100, en la pantalla del juego
  dispondremos de un cuadro de texto para ingresar
   un número y un botón “Verificar”, si el número 
@@ -16,7 +16,6 @@ let minimo = 1;
 function comenzar()
 {
 	numeroSecreto =parseInt(Math.round(Math.random()*(maximo - minimo) + minimo));
-	alert("El numeroSecreto es: " + numeroSecreto);
 }
 
 function verificar()
