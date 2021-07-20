@@ -30,8 +30,7 @@ function CalcularPrecio ()
 	cantidadLamparas = document.getElementById('txtIdCantidad').value;
 	marcaLamparas = document.getElementById('Marca').value;
 	precioTotalLamparas = precioLamparas * cantidadLamparas;
-	alert("precio total sin descuento: "+precioTotalLamparas+" cant. de lamparas: "+cantidadLamparas);
-
+	
 	switch(cantidadLamparas)
 	{
 		case '1':
@@ -39,7 +38,7 @@ function CalcularPrecio ()
 			descuento = 0;
 			break;
 
-		case '3':
+		case '3':83
 			switch(marcaLamparas)
 			{	
 				case "ArgentinaLuz"	:		
@@ -82,7 +81,7 @@ function CalcularPrecio ()
 				descuento = 0.30;
 			}
 			break;
-			
+
 			default:
 			descuento = 0.50;
 	}
