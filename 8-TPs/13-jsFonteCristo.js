@@ -76,11 +76,11 @@ function NumerosImpares ()
 }
 
 let divisorMinimo = 1;
-let contadorDivisibles;
+let iDivisibles;
 
 function NumerosDivisibles() 
 {
-	contadorDivisibles = 0;
+	iDivisibles = 0;
 
 	numeroIngresado = document.getElementById('txtIdNumero').value;
 
@@ -95,7 +95,7 @@ function NumerosDivisibles()
 	{
 		if(numeroIngresado%divisorMinimo == 0)
 		{
-			contadorDivisibles = contadorDivisibles + 1;
+			iDivisibles = iDivisibles + 1;
 			divisorMinimo = divisorMinimo + 1;
 		}
 		else
@@ -103,7 +103,7 @@ function NumerosDivisibles()
 			divisorMinimo = divisorMinimo + 1;
 		}
 	}
-	alert(contadorDivisibles);
+	alert(iDivisibles);
 }
 
 let primo;
@@ -143,15 +143,16 @@ function VerificarPrimo()
 	}
 }
 
-let contadorNoPrimos;
 let cantidadPrimos;
+
 
 function NumerosPrimos() 
 {	
-	contadorNoPrimos = 0;
-	cantidadPrimos = 0;
-	i;
 
+	primo = true;
+	i = 2;
+	cantidadPrimos = 0;
+	
 	numeroIngresado = document.getElementById('txtIdNumero').value;
 
 	if(isNaN(numeroIngresado) || numeroIngresado<0)
@@ -161,20 +162,32 @@ function NumerosPrimos()
 	}
 
 	//E:
-	
-	i = 1;
 
-	while(i<numeroIngresado)
-	{
-		if(numeroIngresado%i == 0)
-		{
-			contadorNoPrimos++;
-			break;
-		}
-		i++;
-	}
+	while(numeroIngresado>1)
+    {                      
+        while(i < numeroIngresado && primo == true)
+        {
+            if(numeroIngresado % i == 0)
+            {
+                primo = false;
+            }
+            else
+            {
+                i++;
+            }         
+        }
 
-	cantidadPrimos = (numeroIngresado - contadorNoPrimos)
-
-	alert(cantidadPrimos);
+        if(primo == true) 
+        {                  
+            cantidadPrimos++;
+        } 
+        else
+        {
+            primo = true; 
+        }
+        numeroIngresado--;
+        i= 2; 
+       //el numero 1 no es matematicamente considerado un numero primo.
+    }
+    alert(cantidadPrimos);
 }
